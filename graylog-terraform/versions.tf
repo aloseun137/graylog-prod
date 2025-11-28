@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "aloseun137-org"
+    organization = "seunorg"
 
     workspaces {
       name = "graylog-prod"
