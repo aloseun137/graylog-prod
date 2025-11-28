@@ -13,7 +13,7 @@ resource "aws_security_group" "graylog" {
     from_port       = 9200
     to_port         = 9200
     protocol        = "tcp"
-    security_groups = [aws_security_group.datanode.id]
+    security_groups = [aws_security_group.internal.id]
   }
 
   egress {

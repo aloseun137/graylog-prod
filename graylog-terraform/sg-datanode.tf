@@ -6,7 +6,7 @@ resource "aws_security_group" "datanode" {
     from_port       = 9001
     to_port         = 9001
     protocol        = "tcp"
-    security_groups = [aws_security_group.graylog.id]
+    security_groups = [aws_security_group.internal.id]
   }
 
   egress {

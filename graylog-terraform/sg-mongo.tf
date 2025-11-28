@@ -3,13 +3,10 @@ resource "aws_security_group" "mongo" {
   vpc_id = aws_vpc.graylog.id
 
   ingress {
-    from_port = 27017
-    to_port   = 27017
-    protocol  = "tcp"
-    security_groups = [
-      aws_security_group.graylog.id,
-      aws_security_group.datanode.id
-    ]
+    from_port       = 27017
+    to_port         = 27017
+    protocol        = "tcp"
+    security_groups = [aws_security_group.internal.id]
   }
 
   egress {

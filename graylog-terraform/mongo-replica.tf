@@ -6,6 +6,7 @@ resource "aws_instance" "mongo" {
   key_name      = var.key_name
   security_groups = [
     aws_security_group.mongo.id,
+    aws_security_group.internal.id,
     aws_security_group.bastion.id
   ]
 
